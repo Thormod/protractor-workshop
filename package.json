@@ -1,0 +1,39 @@
+{
+  "name": "workshop-protractor",
+  "version": "1.0.0",
+  "description": "This is a workshop about protractor",
+  "main": "index.js",
+  "scripts": {
+    "clean": "del dist",
+    "build": "npm run clean && tsc",
+    "test": "npm run build && protractor dist/protractor/local.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thormod/protractor-workshop.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "protractor"
+  ],
+  "author": "Thormod https://github.com/Thormod/protractor-workshop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thormod/protractor-workshop/issues"
+  },
+  "homepage": "https://github.com/Thormod/protractor-workshop#readme",
+  "devDependencies": {
+    "@types/jasminewd2": "^2.0.6",
+    "typescript": "^3.2.2",
+    "@types/isomorphic-fetch": "0.0.34",
+    "jasmine-awesome-report": "0.0.3",
+    "jasmine-spec-reporter": "^4.2.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0"
+  },
+  "dependencies": {
+    "protractor": "^5.4.1"
+  }
+}
