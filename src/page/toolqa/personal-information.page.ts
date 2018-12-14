@@ -58,7 +58,7 @@ export class PersonalInformationPage {
       await this.selectTool(tool).click();
     }
 
-    await this.selectContinent(data.continent);
+    await this.selectContinent(data.continent).click();
 
     for (const command of data.command) {
       await this.selectCommand(command).click();
