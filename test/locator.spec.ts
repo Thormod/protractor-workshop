@@ -1,6 +1,6 @@
 import { browser } from 'protractor';
 import { User } from '../src/model';
-import { PersonalInformationPage } from '../src/page';
+import { PersonalInformationPage } from '../src/page/toolqa';
 
 describe('Given a page for automation tests', () => {
   beforeAll(async () => {

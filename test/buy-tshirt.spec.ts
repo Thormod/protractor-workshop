@@ -10,7 +10,7 @@ import {
   BankPaymentPage,
   OrderResumePage,
   AddressStepPage
-} from '../src/page';
+} from '../src/page/automationpractice';
 
 describe('Given a shopping page', () => {
   beforeAll(async () => {

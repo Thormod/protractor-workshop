@@ -1,5 +1,5 @@
 import { element, by, ElementFinder } from 'protractor';
-import { User } from '../model';
+import { User } from '../../model';
 
 export class PersonalInformationPage {
   private firstNameInput: ElementFinder;

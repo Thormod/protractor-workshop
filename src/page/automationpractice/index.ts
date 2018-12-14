@@ -8,4 +8,3 @@ export { BankPaymentPage } from './bank-payment.page';
 export { OrderResumePage } from './order-resume.page';
 export { AddressStepPage } from './adress-step.page';
 export { ProductListPage } from './product-list.page';
-export { PersonalInformationPage } from './personal-information.page';
