@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "webdriver-manager update --gecko false",
-    "clean": "-rf dist temp",
-    "build": "npm run lint && npm run clean && tsc",
-    "test:local": "npm run build && protractor dist/protractor/local.config.js",
+    "clean": "rm -rf dist awesome-report",
+    "lint": "tslint --project tsconfig.json",
+    "prebuild": "npm run clean && npm run lint",
+    "build": "tsc",
+    "test:local": "npm run build && protractor dist/protractor/config.js",
     "test:headless": "npm run build && protractor dist/protractor/headless.config.js",
-    "lint": "tslint --project tsconfig.json protractor/**/*.ts test/**/*.ts src/**/*.ts",
+    "test:saucelabs": "npm run build && protractor dist/protractor/saucelabs.config.js",
+    "test:zalenium": "npm run build && protractor dist/protractor/zalenium.config.js",
     "test": "npm run test:headless"
   },
   "repository": {
