@@ -3,7 +3,6 @@ import { browser } from 'protractor';
 describe('Given a SDET learning protractor', () => {
   describe('when open Google Page', () => {
     beforeEach(() => {
-      browser.ignoreSynchronization = true;
       browser.get('http://www.google.com');
     });
 

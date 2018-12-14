@@ -14,7 +14,6 @@ import {
 
 describe('Given a shopping page', () => {
   beforeAll(async () => {
-    browser.ignoreSynchronization = true;
     await browser.get('http://automationpractice.com/');
   });
 
