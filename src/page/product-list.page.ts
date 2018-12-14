@@ -10,9 +10,7 @@ export class ProductListPage {
   private findByProduct(productName: string): ElementFinder {
     return this.products
       .filter((item: ElementFinder) =>
-        item
-          .$('.product-name')
-          .getText()
+        item.$('.product-name').getText()
           .then((text: string) => text.includes(productName)))
       .first();
   }
