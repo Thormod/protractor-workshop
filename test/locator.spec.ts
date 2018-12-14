@@ -9,16 +9,29 @@ describe('Given a page for automation tests', () => {
 
   describe('when user try to fill personal information form with data', () => {
     const personalInformationPage = new PersonalInformationPage();
-    const user = new User();
-    user.firstName = 'Sebastian';
-    user.lastName = 'Zapata';
-    user.sex = 'Male';
-    user.experience = 7;
+    const user = new User(
+      'Sebastian',
+      'Zapata',
+      'Male',
+      7,
+      [
+        'Automation Tester'
+      ],
+      [
+        'Selenium Webdriver'
+      ],
+      'South America',
+      [
+        'Browser Commands',
+        'Navigation Commands',
+        'Switch Commands',
+        'Wait Commands',
+        'WebElement Commands'
+      ]);
 
-    personalInformationPage.fillForm(user);
-
-    it('then the form should be filled with user data', () => {
-
+    it('then the form should be filled with user data', async () => {
+      await personalInformationPage.fillForm(user);
+      expect(await personalInformationPage.getPageTitle()).toBe('Practice Automation Form');
     });
   });
 });
