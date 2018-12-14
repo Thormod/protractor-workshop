@@ -4,6 +4,7 @@
   "description": "This is a workshop about protractor",
   "main": "index.js",
   "scripts": {
+    "postinstall": "webdriver-manager update --gecko false",
     "clean": "del dist",
     "build": "npm run clean && tsc",
     "test:local": "npm run build && protractor dist/protractor/local.config.js",
